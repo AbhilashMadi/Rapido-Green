@@ -140,8 +140,6 @@ body{
   font-size: 1.6rem;
   line-height: 1.7;
   overflow-x: hidden;
-
-  min-height: 300vh;
 }
 
 :focus-visible{
@@ -168,15 +166,56 @@ body{
   #REUSED STYLE
 \*-----------------------------------*/
 
-
+.container{
+  padding-inline: 16px;
+}
 
 
 
 /*-----------------------------------*\
   #PRELOADER
 \*-----------------------------------*/
+.preload-box{
+  position: relative;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  transition: var(--transition-1);
 
+  display: none;  /* ------------------REMOVE IT--------- */
+}
 
+.preload-circle{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: rotate360 0.5s linear infinite;
+}
+
+@keyframes rotate360 {
+  0%{
+    transform: translate(-50%,-50%) rotate(0);
+  }
+
+  100%{
+    transform: translate(-50%,-50%) rotate(1turn);
+  }
+}
+
+.preload-box.loaded{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preload-box.loaded .preload-box{
+  animation-iteration-count: 1;
+}
 
 
 
@@ -184,9 +223,72 @@ body{
   #HEADER
 \*-----------------------------------*/
 
+.header-action { display: none; }
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--yellow-green);
+  padding-block: 25px;
+  z-index: 4;
+}
 
+.header.active {
+  position: fixed;
+  animation: slideIn 0.5s ease forwards;
+}
 
+@keyframes slideIn {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle-btn { font-size: 3rem; }
+
+.nav-toggle-btn.active .open,
+.nav-toggle-btn .close { display: none; }
+
+.nav-toggle-btn.open,
+.nav-toggle-btn.active  .close { display: block; }
+
+.navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.25s var(--cubic-out);
+}
+
+.navbar.active {
+  visibility: visible;
+  height: 224px;
+  transition-duration: 0.5s;
+}
+
+.navbar-item{
+  border-block-end:1px solid var(--oxford-blue_a15) ;
+}
+
+.navbar-item{
+  color: var(--black);
+  font-family: var(--ff-nunito_sans);
+  font-size: var(--fs-10);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
 
 /*-----------------------------------*\
   #HERO

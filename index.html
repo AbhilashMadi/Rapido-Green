@@ -28,11 +28,68 @@
     <!----
         -Preload Images
     -->
+    <link rel="preload" as="image" href="./assets/images/loading.svg"/>
+    <link rel="preload" as="image" href="./assets/images/loading-circle.svg"/>
+
 </head>
 <body>
-    
     <!---
-        -custom script link
+        - #PRELOAD
+    -->
+
+    <div class="preload-box" data-preloader>
+        <img src="./assets/images/loading.svg" width="45" height="45" alt="loading">
+        <img src="./assets/images/loading-circle.svg" width="75" height="75" alt="loading-circle" class="preload-circle">
+    </div>
+
+    <!--
+        -#HEADER
+    -->
+
+    <header class="header" data-header>
+        <div class="container">
+            
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="160" height="50" alt="heaer logo">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Gallery</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Blog</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-action">
+
+                <a href="tel: +911234567890" class="contact-number">
+                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                    <span class="span">+(123) 1234-567-8901</span>
+                </a>
+
+                <a href="#" class="btn btn-primary">
+                    <span class="span">Get a quote</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+
+            </div>
+
+            <button class="nav-toggle-btn" area-label="toggle menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true" class="open"></ion-icon>
+                <ion-icon name="close-outline" aria-hidden="true" class="close"></ion-icon>
+            </button>
+
+        </div>
+    </header>
+
+
+
+
+     <!--
+        -custom scripts
     -->
     <script src="./assets/js/script.js"></script>
 

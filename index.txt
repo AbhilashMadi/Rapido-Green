@@ -1,9 +1,3 @@
-Volti - Book Your Eco-Friendly Ride
-
-This is a vahicle charging html template made by codewithsadee
-
-
-
 #---------- HEADER ----------#
 
 alt = volti home

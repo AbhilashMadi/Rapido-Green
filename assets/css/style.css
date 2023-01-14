@@ -170,7 +170,95 @@ body{
   padding-inline: 16px;
 }
 
+.section{
+  padding-block: var(--section-padding);
+}
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+  font-family: var(--ff-quicksand);
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+  color: var(--smoky-black);
+  line-height: 1.3;
+}
+
+.h1{
+  font-size: var(--fs-2);
+}
+
+.h2{
+  font-size: var(--fs-3);
+}
+
+.h3{
+  font-size: var(--fs-4);
+}
+
+.h4{
+  font-size: var(--fs-5);
+}
+
+.h5{
+  font-size: var(--fs-6);
+}
+
+.h6{
+  font-size: var(--fs-7);
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--ff-quicksand);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  max-width: max-content;
+  padding: 20px 40px;
+  border-radius: var(--radius-20) 0;
+  line-height: 1.4;
+  transition: var(--transition-1);
+}
+
+.btn:is(:hover,:focus-visible){
+  border-radius: 0;
+  border-top-right-radius: var(--radius-20);
+}
+
+.btn-primary{
+  background-color: var(--rich-black-fogra-29);
+  color: var(--white)
+}
+
+.btn-primary:is(:hover,:focus-visible){
+  background-color: var(--yellow-green);
+  color: var(--white);
+}
+
+.btn-secondary{
+  color: var(--smoky-black);
+  box-shadow: inset 0 0 0 2px var(--yellow-green);
+}
+
+.btn-secondary:is(:hover,:focus-visible){
+  background-color: var(--yellow-green);
+  color: var(--white);
+}
+
+.w-100{
+  width: 100%;
+}
 
 /*-----------------------------------*\
   #PRELOADER
@@ -293,10 +381,46 @@ body{
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
+.hero-list{
+  display: none;
+}
 
+.hero{
+  position: relative;
+  background-color: var(--yellow-green);
+  padding-block: calc(var(--section-padding) + 60px) 0;
+  margin-block-end: var(--section-padding);
+}
 
+.hero .container{
+  display: grid;
+  gap: 50px;
+}
 
+.hero-title{
+  color: var(--white);
+  text-align: center;
+  line-height: 1.4;
+  margin-block-end: 30px;
+}
 
+.hero-title .span{
+  display: inline;
+  color: var(--smoky-black);
+}
+
+.hero .btn{
+  margin-inline: auto;
+}
+
+.hero .btn:is(:hover,:focus-visible){
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.hero-banner{
+  margin-block-end: -15%;
+}
 
 /*-----------------------------------*\
   #ABOUT

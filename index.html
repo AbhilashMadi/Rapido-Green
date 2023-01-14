@@ -15,21 +15,22 @@
     -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
+    <!----
+        -custom fonts
+    --->
+    <link rel="stylesheet" href="./assets/font/font.css">
+
     <!---
        -custom styles
     -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!----
-        -custom fonts
-    --->
-    <link rel="stylesheet" href="./assets/font/font.css">
-
-    <!----
         -Preload Images
     -->
     <link rel="preload" as="image" href="./assets/images/loading.svg"/>
     <link rel="preload" as="image" href="./assets/images/loading-circle.svg"/>
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
 
 </head>
 <body>
@@ -85,7 +86,82 @@
         </div>
     </header>
 
+    <!--
+        -MAIN SECTION
+    -->
+    <main>
+        <ariticle>
 
+            <!--
+                - #HERO
+            -->
+
+            <section class="section hero" area-label="home">
+                <div class="container">
+
+                    <div class="hero-context" data-reveal="left">
+
+                        <h1 class="h1 hero-title">
+                            Book Your <span class="span">New Eco-Friendly</span> Ride.
+                        </h1>
+
+                        <ul class="hero-list">
+
+                            <li>
+                                <div class="hero-card">
+
+                                    <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+
+                                    <p class="card-subtitle">Top speed</p>
+
+                                    <p class="card-title">80 km/h</p>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="hero-card">
+
+                                    <ion-icon name="stopwatch-outline" aria-hidden="true"></ion-icon>
+
+                                    <p class="card-subtitle">0-40 km/hr in</p>
+
+                                    <p class="card-title">116 km</p>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="hero-card">
+
+                                    <ion-icon name="checkmark-done-circle-outline" aria-hidden="true"></ion-icon>
+
+                                    <p class="card-subtitle">Certified Range</p>
+
+                                    <p class="card-title">80 km/h</p>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <a href="#" class="btn btn-primary">
+                            <span>Book Now</span>
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                        </a>
+
+                    </div>
+
+                    <figure class="hero-banner" data-reveal="right">
+                        <img src="./assets/images/hero-banner.png"
+                         alt="Bike" class="w-100">
+                         <!--width="1116" height="766"-->
+                    </figure>
+
+                </div>
+            </section>
+        </ariticle>
+    </main>
 
 
      <!--

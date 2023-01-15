@@ -291,6 +291,13 @@ body{
   border-radius: var(--radius-circle);
 }
 
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-2);
+}
+
 /*-----------------------------------*\
   #PRELOADER
 \*-----------------------------------*/
@@ -519,11 +526,66 @@ body{
 /*-----------------------------------*\
   #STATS
 \*-----------------------------------*/
+.stats{
+  padding-block: 0;
+}
 
+.stats :is(.container,.stats-list){
+  display: grid;
+}
 
+.stats .container{
+  gap: 40px;
+}
 
+.stats-list{
+  gap: 30px;
+}
 
+.stats-card{
+  text-align: center;
+  padding-inline: 50px;
+}
 
+.stats-card .card-title{
+  color: var(--smoky-black);
+  font-size: var(--fs-1);
+}
+
+.stats-card .card-text{
+  font-size: var(--fs-9);
+  font-weight: var(--fw-600);
+}
+
+.stats-banner{
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius-60) 0;
+  overflow: hidden;
+}
+
+.play-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--white);
+  background-color: var(--yellow-green);
+  font-size: 30px;
+  padding: 20px;
+  border-radius: var(--radius-circle);
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%{
+    box-shadow: 0 0 0 0 var(--yellow-green);
+  }
+
+  100%{
+    box-shadow: 0 0 0 20px transparent;
+  }
+}
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/

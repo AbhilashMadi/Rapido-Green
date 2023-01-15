@@ -701,7 +701,30 @@ body{
 }
 
 .cta-banner .img-cover:hover{
-  transform: scale(1.07);
+  transform: scale(1.2);
+}
+
+.blog-card .card-content{
+  position: relative;
+  margin-inline-start: 30px;
+  margin-block-start: -40px;
+  background-color: var(--white);
+  padding: 30px 35px;
+  box-shadow: var(--shadow);
+  border-bottom-right-radius: var(--radius-30);
+}
+
+.blog-card .publish-date{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: var(--yellow-green);
+  color: var(--white);
+  padding: 6px 25px;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  border-top-left-radius: var(--radius-20);
 }
 
 
@@ -709,8 +732,73 @@ body{
   #BLOG
 \*-----------------------------------*/
 
+.blog { padding-block-end: 60px; }
 
+.blog .title-wrapper {
+  display: grid;
+  gap: 50px;
+  margin-block-end: 50px;
+}
 
+.blog .section-title { margin-block: 10px; }
+
+.blog-list {
+  display: grid;
+  gap: 30px;
+}
+
+.blog-card .card-banner { border-top-left-radius: var(--radius-30); }
+
+.blog-card:is(:hover, :focus-within) .img-cover { transform: scale(1.2); }
+
+.blog-card .card-content {
+  position: relative;
+  margin-inline-start: 30px;
+  margin-block-start: -40px;
+  background-color: var(--white);
+  padding: 30px 35px;
+  box-shadow: var(--shadow);
+  border-bottom-right-radius: var(--radius-30);
+}
+
+.blog-card .publish-date {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: var(--yellow-green);
+  color: var(--white);
+  padding: 6px 25px;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  border-top-left-radius: var(--radius-20);
+}
+
+.blog-card .card-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+
+.blog-card .card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-card .card-meta-item ion-icon {
+  color: var(--yellow-green);
+  --ionicon-stroke-width: 50px;
+}
+
+.blog-card .card-meta-item .span { font-size: var(--fs-10); }
+
+.blog-card .card-title {
+  margin-block-start: 10px;
+  transition: var(--transition-1);
+}
+
+.blog-card .card-title:is(:hover, :focus-visible) { color: var(--yellow-green); }
 
 
 /*-----------------------------------*\

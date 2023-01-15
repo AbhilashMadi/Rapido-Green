@@ -298,6 +298,12 @@ body{
   transition: var(--transition-2);
 }
 
+.img-holder{
+  aspect-ratio: var(--width)/var(--height);
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
 /*-----------------------------------*\
   #PRELOADER
 \*-----------------------------------*/
@@ -591,13 +597,65 @@ body{
     box-shadow: 0 0 0 20px transparent;
   }
 }
+
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
+.service .section-subtitle{
+  max-width: max-content;
+  margin-inline: auto;
+}
 
+.service .section-title{
+  text-align: center;
+  margin-block-end: 60px;
+}
 
+.service-item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
+.service-item .card-icon{
+  background-color: var(--yellow-green);
+  min-width: 75px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-20) 0;
+  transition: var(--transition-1);
+}
+
+.service-item:hover .card-icon{
+  border-radius: 0;
+  border-top-right-radius: var(--radius-20);
+  background-color: var(--smoky-black);
+}
+
+.service-list:first-child .service-item{
+  flex-direction: row-reverse;
+  margin-block-end: 40px;
+}
+
+.service-banner{
+  background-color: unset;
+}
+
+.service-item .card-title{
+  margin-block-end: 5px;
+}
+
+.service-item ion-icon {
+  color: var(--white);
+  font-size: 4.5rem;
+  --ionicon-stroke-width: 20px;
+}
+
+.service-list:last-child .service-item {
+  margin-block-start: 40px;
+}
 
 /*-----------------------------------*\
   #CTA

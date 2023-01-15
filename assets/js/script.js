@@ -36,7 +36,6 @@ window.addEventListener("scroll", function(){
     }
 });
 
-
 /*
 ** #STATS COUNTER
 */

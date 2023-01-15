@@ -805,6 +805,27 @@ body{
   #CONTACT
 \*-----------------------------------*/
 
+.contact{
+  padding-block: 40px 120px;
+  border-block-start: 1px solid var(--cultured);
+}
+
+.contact-list{
+  display: grid;
+  gap: 25px;
+}
+
+.contact-card{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-card ion-icon{
+  font-size: 4.5rem;
+  color: var(--yellow-green);
+  --ionicon-stroke-width:20px;
+}
 
 
 

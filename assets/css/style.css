@@ -558,6 +558,10 @@ body{
   font-weight: var(--fw-600);
 }
 
+.count{
+  display: inline;
+}
+
 .stats-banner{
   position: relative;
   height: 380px;

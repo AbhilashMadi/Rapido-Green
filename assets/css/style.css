@@ -313,7 +313,8 @@ body{
   place-items: center;
   transition: var(--transition-1);
 
-  display: none;  /* ------------------REMOVE IT--------- */
+  display: none;  
+  /* ------------------REMOVE IT--------- */
 }
 
 .preload-circle{

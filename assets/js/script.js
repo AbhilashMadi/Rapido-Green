@@ -35,3 +35,27 @@ window.addEventListener("scroll", function(){
         header.classList.remove("acive");
     }
 });
+
+
+/*
+** #STATS COUNTER
+*/
+
+const countElems = document.querySelectorAll(".count");
+const interval = 5000;
+
+countElems.forEach((countElem) => {
+    let startAt = 0;
+    let endAt = parseInt(countElem.getAttribute("data-stats"))
+    
+    const duration = Math.floor(interval/endAt);
+    
+    let counter = setInterval(() => {
+        startAt += 1;
+        countElem.textContent = startAt;
+
+        if(startAt == endAt){
+            clearInterval(counter);
+        }
+    }, duration);
+})

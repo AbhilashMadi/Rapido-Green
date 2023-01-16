@@ -33,7 +33,7 @@
     <link rel="preload" as="image" href="./assets/images/hero-banner.png">
 
 </head>
-<body>
+<body id="top">
     <!---
         - #PRELOAD
     -->
@@ -57,10 +57,10 @@
             <nav class="navbar" data-navbar>
                 <ul class="navbar-list">
                     <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link">Services</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link">Gallery</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link">Blog</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link">Contact Us</a></li>
+                    <li class="navbar-item"><a href="#service" class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="#about" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="#blog" class="navbar-link">Blog</a></li>
+                    <li class="navbar-item"><a href="#contact" class="navbar-link">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -97,74 +97,67 @@
             -->
 
             <section class="section hero" aria-label="home">
-                <div class="container">
+        <div class="container">
 
-                    <div class="hero-context" data-reveal="left">
+          <div class="hero-content" data-reveal="left">
 
-                        <h1 class="h1 hero-title">
-                            Book Your <span class="span">New Eco-Friendly</span> Ride.
-                        </h1>
+            <h1 class="h1 hero-title">
+              Book Your <span class="span">New Eco-Friendly</span> Ride.
+            </h1>
 
-                        <ul class="hero-list">
+            <ul class="hero-list">
 
-                            <li>
-                                <div class="hero-card">
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
 
-                                    <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+                  <p class="card-subtitle">Top speed</p>
 
-                                    <p class="card-subtitle">Top speed</p>
-
-                                    <p class="card-title">80 km/h</p>
-
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="hero-card">
-
-                                    <ion-icon name="stopwatch-outline" aria-hidden="true"></ion-icon>
-
-                                    <p class="card-subtitle">0-40 km/hr in</p>
-
-                                    <p class="card-title">116 km</p>
-
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="hero-card">
-
-                                    <ion-icon name="checkmark-done-circle-outline" aria-hidden="true"></ion-icon>
-
-                                    <p class="card-subtitle">Certified Range</p>
-
-                                    <p class="card-title">80 km/h</p>
-
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">
-                            <span>Book Now</span>
-                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                        </a>
-
-                    </div>
-
-                    <figure class="hero-banner" data-reveal="right">
-                        <img src="./assets/images/hero-banner.png"
-                         alt="Bike" class="w-100">
-                         <!--width="1116" height="766"-->
-                    </figure>
-
+                  <p class="card-title">80 km/h</p>
                 </div>
-            </section>
+              </li>
+
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="stopwatch-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-subtitle">0-40 km/hr in</p>
+
+                  <p class="card-title">3.3 sec</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-subtitle">Certified Range</p>
+
+                  <p class="card-title">116 km</p>
+                </div>
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Book Now</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./assets/images/hero-banner.png" width="1116" alt="Bike" class="w-100">
+          </figure>
+
+        </div>
+      </section>
 
             <!--
                 - #ABOUT
             -->
-            <section class="section about" aria-labelledby="about-lab">
+            <section class="section about" id="about" aria-labelledby="about-lab">
                 <div class="container">
 
                     <figure class="about-banner" data-reveal="left">
@@ -296,7 +289,7 @@
             <!--
                 - #SERVICE
             -->
-            <section class="section service" aria-labelledby="service-label">
+            <section class="section service" id="service" aria-labelledby="service-label">
 
                 <div class="container">
                     <p class="section-subtitle has-before" id="service-label" iddata-reveal>
@@ -438,7 +431,7 @@
                 - #BLOG
             -->
 
-            <section class="section blog" aria-labelledby="">
+            <section class="section blog" id="blog" aria-labelledby="">
                 <div class="container">
 
                     <div class="title-wrapper" data-reveal>
@@ -574,7 +567,7 @@
                 - #CONTACT
             -->
 
-            <section class="contact" aria-label="contact" dta-reveal="right">
+            <section class="contact" id="contact" aria-label="contact" data-reveal="right">
                 <div class="container">
 
                    <ul class="contact-list">
@@ -711,7 +704,9 @@
                         <a href="#" class="footer-link">Careers</a>
                     </li>
 
-                    <ul class="footer-list">
+                   </ul>
+
+                   <ul class="footer-list">
 
                     <li>
                         <p class="h6 has-after">Quick Contact</p>
@@ -719,7 +714,7 @@
 
                     <li>
                         <address class="footer-text">
-                            2307 Beverley Rd Brooklyn, New York 11226 United States.
+                            3rd Planet, Country I.N state T.S ADB.
                         </address>
                     </li>
 
@@ -735,83 +730,79 @@
                         </a>
                     </li>
 
-                   </ul>
-
                 </ul>
 
             </div>
 
-            <div class="footer-bottom">
+             <div class="footer-bottom">
 
-                <ul class="footer-bottom-list">
+        <div>
+          <ul class="footer-bottom-list">
 
-                    <li>
-                        <a href="#" class="footer-bottom-link">
-                            Where to Find Us 
-                        </a>
-                    </li>
+            <li>
+              <a href="#" class="footer-bottom-link">Where to Find Us</a>
+            </li>
 
-                    <li>
-                        <a href="#" class="footer-bottom-link">
-                            Terms of Payment
-                        </a>
-                    </li>
+            <li>
+              <a href="#" class="footer-bottom-link">Terms of Payment</a>
+            </li>
 
-                    <li>
-                        <a href="#" class="footer-bottom-link">
-                            Stats Element
-                        </a>
-                    </li>
+            <li>
+              <a href="#" class="footer-bottom-link">Stats Element</a>
+            </li>
 
-                </ul>
+          </ul>
 
-                <p class="copyright">&copy; ownedby the coder 
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                </p>
+          <p class="copyright">&copy;
+            <script>
+            document.write(new Date().getFullYear())
+            </script>
+            @coder
+            </p>
+        </div>
 
-                <img src="./assets/images/footer-logo.svg" width="100" height="63" loading="lazy" alt="Volti home">
+        <img src="./assets/images/footer-logo.svg" width="100" height="63" loading="lazy" alt="Volti home">
 
-                <ul class="social-list">
+        <ul class="social-list">
 
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
-                    </a>
-                </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
 
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
-                    </a>
-                </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
 
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
-                    </a>
-                </li>
-    <!-- 
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
-                    </a>
-                </li> -->
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
 
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                    </a>
-                </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
 
-                </ul>
+        </ul>
 
-            </div>
+      </div>
 
         </div>  
     </footer>
 
+    <!--
+        -#BACK TO TOP
+    -->
+
+    <a href="#top" class="back-top-btn" aria-label="go to top" data-go-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
 
      <!--
         -custom scripts

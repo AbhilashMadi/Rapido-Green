@@ -27,13 +27,16 @@ navToggler.addEventListener("click",toggleNavbar);
 */
 
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-go-top-btn]");
 
-window.addEventListener("scroll", function(){
-    if(this.window.scrollY >= 100){
-        header.classList.add("active");
-    } else {
-        header.classList.remove("acive");
-    }
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
 });
 
 /*
@@ -58,3 +61,25 @@ countElems.forEach((countElem) => {
         }
     }, duration);
 })
+
+
+/*
+** - #SCROLL REVEAL
+*/
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+
+const scrollReveal = function () {
+
+  revealElements.forEach((element) => {
+    if(element.getBoundingClientRect().top <= window.innerHeight/1.2){
+        element.classList.add("revealed");
+    } else {
+        element.classList.remove("revealed")
+    }
+  })
+  
+};
+
+window.addEventListener("scroll", scrollReveal);
+window.addEventListener("load", scrollReveal);
